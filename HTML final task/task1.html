@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .container {
+            width: 520px;
+            background-color: lightgray;
+            padding: 20px 25px;
+            margin: 40px auto;
+            border-radius: 5px;
+        }
+
+        .title {
+            text-align: right;
+            margin-bottom: 15px;
+        }
+
+        .title a {
+            color: brown;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 6px 5px;
+            vertical-align: top;
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"],
+        input[type="number"]
+        select,
+        textarea {
+            width: 100%;
+            padding: 5px;
+        }
+
+        textarea {
+            height: 70px;
+        }
+
+        .radio-group input,
+        .checkbox-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            margin-right: 15px;
+            font-size: 13px;
+        }
+
+        button {
+            background-color: darkgreen;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">
+        <a href="" onclick="alert('You clicked on Student Registration Form')">Student Registration Form</a>
+    </div>
+
+    <form>
+        <table>
+            <tr>
+                <td><label>First Name:</label></td>
+                <td><input type="text" pattern="[A-Za-z]+" placeholder="Enter your first name" required autofocus></td>
+            </tr>
+
+            <tr>
+                <td><label>Last Name:</label></td>
+                <td><input type="text" pattern="[A-Za-z]+" placeholder="Enter your last name" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email"  placeholder="it should contain @" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Mobile:</label></td>
+                <td><input type="tel" placeholder="only 10 digits are allowed" maxlength="10" pattern="[0-9]{10}" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Gender:</label></td>
+                <td class="radio-group">
+            
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        Male
+                    </label>
+            
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="female">
+                        Female
+                    </label>
+            
+                </td>
+            </tr>
+            
+
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td>
+                    <input type="date" id="dob" name="dob" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Address:</label></td>
+                <td><textarea required></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label>City:</label></td>
+                <td><input type="text" pattern="[A-Za-z]+" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Area PIN:</label></td>
+                <td><input  type="text" pattern="\d{6}" maxlength="6" required title="Enter a 6-digit PIN code"></td>
+            </tr>
+
+            <tr>
+                <td><label>State:</label></td>
+                <td><input type="text" pattern="[A-Za-z]+" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Qualification:</label></td>
+                <td>
+                    <select required>
+                        <option>Select Qualification</option>
+                        <option>BCA</option>
+                        <option>MCA</option>
+                        <option>B.Tech</option>
+                        <option>M.Tech</option>
+                        <option>MBA</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Specialization:</label></td>
+                <td class="checkbox-group">
+                    <input type="checkbox"> Computer Science<br>
+                    <input type="checkbox"> Information Technology<br>
+                    <input type="checkbox"> Computer Architecture<br>
+                    <input type="checkbox"> Tele Communication
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Password:</label></td>
+                <td><input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least 8 characters, including at least one number, one lowercase and one uppercase letter, and one special symbol" required></td>
+            </tr>
+
+            <tr>
+                <td><button type="submit" onsubmit="alert('You clicked on submit')">Registered</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download and Excel file check </title>
+    <style>
+        .result{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Download button </h2><br><br>
+    <a href="HTML Final Exam.pdf" download>
+        <button>Download File</button>
+    </a><br><br><br>
+
+
+    <h4> Select File: </h4>
+    <input type="file" id="file">
+    <br><br>
+
+    <button onclick="checkFile()">Upload</button>
+
+    <div class="result" id="result"></div>
+
+
+    <script>
+        function checkFile() {
+            const fileInput = document.getElementById("file");
+            const msg = document.getElementById("result");
+            const file = fileInput.files[0];
+        
+            if (!file) {
+                msg.innerText = "Please select a file";
+                return;
+            }
+        
+            const allowedTypes = [
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", 
+                "application/vnd.ms-excel"
+            ];
+        
+            if (!allowedTypes.includes(file.type)) {
+                msg.innerText = "Only Excel files (.xls, .xlsx) are allowed.";
+            } else {
+                msg.innerText = "";
+                alert("YOU SELECTED AN EXCEL FILE");
+            }
+        }
+    </script>
+        
+</body>
+</html>
