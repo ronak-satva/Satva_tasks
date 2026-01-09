@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Overlapping Rectangles</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="600" height="500"></canvas>
+
+<script>
+   const canvas = document.getElementById("myCanvas");
+   const ctx = canvas.getContext("2d");
+
+   ctx.fillStyle = "pink";
+   ctx.fillRect(50,60,200,130);
+
+   ctx.fillStyle = "lightgreen";
+   ctx.globalAlpha = 0.5;
+   ctx.fillRect(180,200,200,130);
+</script>
+
+</body>
+</html>

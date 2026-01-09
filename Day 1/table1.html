@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Laboratory Journal</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 4px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    .header td {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .week {
+        text-align: center;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .name {
+        text-align: left;
+        padding-left: 6px;
+    }
+
+    input[type="text"] {
+        width: 45px;
+        text-align: center;
+    }
+
+    .cw {
+        width: 60px;
+    }
+
+    .checkbox {
+        transform: scale(1.1);
+    }
+
+    .save {
+        margin-top: 10px;
+        padding: 5px 20px;
+    }
+    .no_border_1{
+        border-right: 0px;
+        align-self: center;
+    }
+    .no_border_2{
+        border-left: 0px;
+        border-right: 0px;
+    }
+    .no_border_3{
+        border-left: 0px;
+    }
+    .number{
+        text-align: left;
+    }
+</style>
+</head>
+
+<body>
+
+
+<table class="header" style="margin-bottom: 30px;">
+    <tr>
+        <td class="no_border_1">Faculty: Faculty of Computer Systems and Control</td>
+        <td class="no_border_2">Speciality: Computer Systems and Technologies</td>
+        <td class="no_border_3">Group: C04S01G62</td>
+    </tr>
+    <tr class="outer">
+        <td class="no_border_1">Day: Monday</td>
+        <td class="no_border_2">Laboratory: 3241</td>
+        <td class="no_border_3">Time: 7:30</td>
+    </tr>
+</table>
+
+<div class="week">Even Week</div>
+
+
+<table>
+   
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Fac number</th>
+        <th>Ex.1</th>
+        <th>Ex.2</th>
+        <th>Ex.3</th>
+        <th>Ex.4</th>
+        <th>Pr.1</th>
+        <th>Pr.2</th>
+        <th>SA</th>
+        <th>Mark SA</th>
+        <th>SP</th>
+        <th>Mark SP</th>
+        <th>Control work 1</th>
+        <th>Control work 2</th>
+        <th>Mark</th>
+        <th>Sign</th>
+    </tr>
+
+    <!-- HEADER ROW 2 -->
+    <tr>
+        <th></th>
+        <th>Year: 2012</th>
+        <th>Date</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    <!-- ROW 1 -->
+    <tr>
+        <td class="number">1.</td>
+        <td class="name">Ana Filcheva</td>
+        <td class="number">123208011</td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" class="cw"></td>
+        <td><input type="text" class="cw"></td>
+        <td></td>
+        <td><input type="checkbox" class="checkbox"></td>
+    </tr>
+
+    <!-- ROW 2 -->
+    <tr>
+        <td class="number">2.</td>
+        <td class="name">Aneta Petkova</td>
+        <td class="number">121208143</td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" class="cw"></td>
+        <td><input type="text" class="cw"></td>
+        <td></td>
+        <td><input type="checkbox" class="checkbox"></td>
+    </tr>
+
+    <!-- ROW 3 -->
+    <tr>
+        <td class="number">3.</td>
+        <td class="name">Angel Vasilev</td>
+        <td class="number">121208138</td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+        <td><input type="text" class="cw"></td>
+        <td><input type="text" class="cw"></td>
+        <td></td>
+        <td><input type="checkbox" class="checkbox"></td>
+    </tr>
+
+    <!-- ROW 4 (DEFAULTS) -->
+    <tr>
+        <td class="number">4.</td>
+        <td class="name">Marty Borisov</td>
+        <td class="number">121208160</td>
+        <td><input type="checkbox" class="checkbox" checked></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox" checked></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td><input type="text" value="123"></td>
+        <td><input type="text" value="5"></td>
+        <td><input type="text" value="43"></td>
+        <td><input type="text"></td>
+        <td><input type="text" class="cw" value="6"></td>
+        <td><input type="text" class="cw" value="6"></td>
+        <td></td>
+        <td><input type="checkbox" class="checkbox" checked></td>
+    </tr>
+</table>
+
+<div style="text-align:center;">
+    <button class="save">Save</button>
+</div>
+
+</body>
+</html>

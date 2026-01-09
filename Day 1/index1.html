@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        header, footer {
+            background-color: darkgrey;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            width: 450px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px gray;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 100%;
+            height: 180px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+        .radio-group input {
+            margin-right: 3px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function showMessage() {
+            alert("Register button clicked");
+        }
+
+        function nameChanged() {
+            alert("Name value changed");
+        }
+
+        function inputFocused() {
+            console.log("Input focused");
+        }
+
+        function inputBlurred() {
+            console.log("Input blurred");
+        }
+
+        function formSubmitted() {
+            alert("Form submitted successfully");
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>GLS University</h1>
+    <h2>Student Registration Portal</h2>
+</header>
+
+<div class="container">
+
+    <h2>Register Yourself</h2>
+
+    <img src="https://picsum.photos/id/1015/200/150" alt="Student Banner">
+
+    <h3>Registration Form</h3>
+
+    <form onsubmit="formSubmitted()">
+
+       
+        <label for="name">Full Name</label>
+        <input type="text" id="name"
+               onchange="nameChanged()"
+               onfocus="inputFocused()"
+               onblur="inputBlurred()"
+               required>
+
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        
+        <label>Gender</label>
+        <div class="radio-group">
+            <input type="radio" name="gender" id="male" value="Male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female" value="Female">
+            <label for="female">Female</label>
+
+            <input type="radio" name="gender" id="other" value="Other">
+            <label for="other">Other</label>
+        </div>
+
+       
+        <label for="course">Course</label>
+        <input type="text" id="course" list="courseList" placeholder="Select course">
+
+        <datalist id="courseList">
+            <option value="BCA">
+            <option value="MCA">
+            <option value="B.Tech">
+            <option value="M.Tech">
+            <option value="MBA">
+        </datalist>
+
+        
+        <label for="address">Address</label>
+        <textarea id="address"></textarea>
+
+        <button type="submit" onclick="showMessage()">Register</button>
+    </form>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 ABC Institute</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Allow Image or PDF</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            width: 700px;
+            margin: 30px auto;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .box {
+            border: 1px solid black;
+        }
+
+        .box h2 {
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        button {
+            margin-top: 5px;
+            padding: 3px 10px;
+        }
+
+        .result {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="box">
+        <h2>Allow Only Image or PDF</h2>
+
+        <div class="content">
+            Select File:
+            <input type="file" id="file">
+            <br>
+
+            <button onclick="checkFile()">Upload</button>
+
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+   function checkFile() {
+    const file = document.getElementById("file").files[0];
+    const msg = document.getElementById("result");
+
+    if (!file) {
+        msg.innerText = "Please select a file";
+        return;
+    }
+
+    if (file.type === "application/pdf") {
+        msg.innerText = "File is not Image";
+    }
+    else if (file.type.startsWith("image/")) {
+        const imageType = file.type.split("/")[1]; // png, jpeg, gif etc.
+        msg.innerText = "File is Image\nFile type = " + imageType;
+    }
+    else {
+        msg.innerText = "File is Not Allowed";
+    }
+}
+</script>
+
+</body>
+</html>

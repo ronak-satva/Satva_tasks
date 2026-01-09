@@ -1,0 +1,178 @@
+html ,body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#eef1f4;
+    height: 100%;
+}
+ 
+/* layout */
+.wrapper{
+    display:flex;
+    min-height:100vh;
+}
+ 
+/* sidebar*/
+.sidebar{
+    width:230px;
+    background:#2f3a40;
+    color:white;
+    padding-top:20px;
+}
+ 
+.sidebar h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+ 
+.menu p{
+    padding:10px 20px;
+    margin:0;
+    cursor:pointer;
+}
+ 
+.menu p:hover{
+    background:#1f2a30;
+}
+ 
+/* MAIN  */
+.main{
+    flex:1;
+    display: flex;
+    background:white;
+    flex-direction: column;
+}
+ 
+.topbar{
+    height:50px;
+    background:#ffffff;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    font-weight:bold;
+    font-size: 30px;
+}
+ 
+.content{
+    padding:30px;
+}
+ 
+h2{
+    margin-top:0;
+}
+ 
+/* form */
+.form-row{
+    margin-bottom:20px;
+}
+ 
+label{
+    display:inline-block;
+    width:200px;
+    font-weight: bold;
+}
+ 
+input:focus, select:focus{
+    outline: none;
+    border: 1px solid #4da3ff;
+    box-shadow: 0 0 6px rgba(77,163,255,0.8);
+}
+ 
+ 
+input, select{
+    padding:7px;
+    width:200px;
+}
+ 
+input[type="radio"]{
+    width:auto;
+}
+ 
+.phone input{
+    width:95px;
+}
+ 
+.buttons{
+    margin-top:30px;
+}
+ 
+button{
+    padding:8px 18px;
+    border:none;
+    cursor:pointer;
+    color:white;
+    border-radius: 5px;
+}
+ 
+.save{
+    background:#1f8ef1;
+}
+ 
+.cancel{
+    background:#ccc;
+    color:black;
+}
+ 
+/* dropdwon*/
+.dropdown{
+    cursor:pointer;
+}
+ 
+.drop-title{
+    padding:10px 20px;
+    background:#2f3a40;
+}
+ 
+.drop-items{
+    display:none;
+    background:#263238;
+}
+ 
+.drop-items p{
+    padding:8px 35px;
+    margin:0;
+    font-size:14px;
+}
+ 
+.dropdown:hover .drop-items{
+    display:block;
+}
+ 
+.dropdown:hover .drop-title{
+    background:#1f8ef1;
+}
+ 
+/*utility bar */
+.utility-bar{
+    height:50px;
+    background:#f7f8fa;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 15px;
+}
+ 
+.utility-bar .left,
+.utility-bar .right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+ 
+.utility-bar input{
+    padding:6px 10px;
+    border-radius:20px;
+    border:1px solid #ccc;
+    width:220px;
+}
+ 
+.utility-bar i{
+    color:#555;
+    cursor:pointer;
+}
+ 
+.utility-bar img{
+    border-radius:50%;
+}
+ 

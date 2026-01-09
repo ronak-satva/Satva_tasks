@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validations</title>
+        <style>
+            body {
+                font-family: Arial;
+            }
+       
+            .form-box {
+                width: 50%;
+                border: 1px solid black;
+                padding: 15px;
+            }
+       
+            label {
+                font-weight: bold;
+                display: block;
+                margin-top: 10px;
+            }
+       
+            input {
+                width: 100%;
+                padding: 6px;
+                margin: 3px;
+            }
+       
+            input:invalid {
+                border: 2px solid red;
+            }
+       
+            input:valid {
+                border: 2px solid black;
+            }
+       
+            button {
+                margin-top: 15px;
+                padding: 5px 15px;
+            }
+        </style>
+       
+    </head>
+    <div>
+        <div class="form-box">
+        <form>
+            <label> First Name:</label>
+            <input type="text" placeholder="enter your first name" required>
+ 
+            <label> Last Name:</label>
+            <input type="text" placeholder="enter your last name" required>
+ 
+            <label> Email:</label>
+            <input type="email" placeholder="enter email" required>
+ 
+            <label> Age:</label>
+            <input type="number" placeholder="Enter Age" min="1" required>
+ 
+            <label>LinkedIn Profile Link:</label>
+            <input type="url" placeholder="Enter LinkedIn Profile Link" required>
+ 
+            <label>Number between 10 & 20:</label>
+            <input type="number" placeholder="Enter Number Between 10 & 20" min="10" max="20" required>
+ 
+            <label>Password (With 1 Number, 1 UpperCase, 1 LowerCase with 5 Min length):</label>
+            <input type="password"
+                placeholder="Enter Password"
+                required
+                pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{5,}"
+                title="Must contain at least one number, one uppercase letter, one lowercase letter and minimum 5 characters">
+ 
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    </body>
+</html>
