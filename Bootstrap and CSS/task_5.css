@@ -1,0 +1,13 @@
+.grid-section {
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+    background-color: lightblue;
+}
+ 
+.container {
+    max-width: 100%;
+    margin: 10px;
+}
