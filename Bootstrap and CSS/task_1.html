@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5 Responsive Form</title>
+
+    <link href="Bootstrap\bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-5 bg-white p-4 rounded shadow">
+
+        <form id="signupForm" novalidate>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" id="email"  pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password"
+                       class="form-control"
+                       id="password"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       required>
+                <div class="valid-feedback">Password looks good!</div>
+                <div class="invalid-feedback">
+                    Must contain 8 characters, uppercase, lowercase & number
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" required>
+                <div class="invalid-feedback">Passwords do not match</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">URL</label>
+                <input type="url" class="form-control" id="url" required>
+                <div class="valid-feedback">Valid URL</div>
+                <div class="invalid-feedback">Please enter a valid URL</div>
+            </div>
+
+            <button class="btn btn-primary w-100" type="submit">Submit</button>
+
+        </form>
+
+    </div>
+</div>
+
+<script src="Bootstrap\bootstrap.min.js"></script>
+
+<script>
+    const form = document.getElementById("signupForm");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+
+    confirmPassword.addEventListener("input", () => {
+        if (!confirmPassword.value) {
+            confirmPassword.setCustomValidity("");
+            confirmPassword.classList.remove("is-valid", "is-invalid");
+            return;
+        }
+
+        if (confirmPassword.value === password.value) {
+            confirmPassword.setCustomValidity("");
+            confirmPassword.classList.add("is-valid");
+            confirmPassword.classList.remove("is-invalid");
+        } else {
+            confirmPassword.setCustomValidity("Passwords do not match");
+            confirmPassword.classList.add("is-invalid");
+            confirmPassword.classList.remove("is-valid");
+        }
+    });
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        form.classList.add("was-validated");
+
+        if (form.checkValidity()) {
+            alert("Form submitted successfully!");
+        }
+    });
+</script>
+
+</body>
+</html>
