@@ -1,0 +1,30 @@
+/* Task 1 */
+body {
+    background: #f8f9fa;
+}
+/* Task 2 */
+.box {
+    border: 2px solid #000;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.custom{
+    min-height: 250px;
+}
+
+
+.box-1 {
+    min-height: 100%;
+}
+/* Task 3 */
+/* Task 6 */
+.hero {
+    background-color: #f1f3f5;
+    padding: 80px 60px;
+    border-radius: 6px;
+}
+ 
+
