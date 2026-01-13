@@ -1,0 +1,19 @@
+.modal-content {
+    border-radius: 8px;
+}
+
+.form-control,
+.form-select {
+    height: 40px;
+    font-size: 14px;
+}
+
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+    background-image: none;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+    background-image: none;
+}
