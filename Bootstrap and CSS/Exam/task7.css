@@ -1,0 +1,77 @@
+body {
+    background-color: #fffbd6;
+    padding: 30px;
+  }
+  .btn-row {
+    margin-bottom: 20px;
+  }
+  .btn {
+    margin-right: 8px;
+    min-width: 120px;
+    font-weight: 600;
+  }
+  .btn-primary-vertical
+  {
+      background: linear-gradient(
+  to bottom,
+  #0d6efd 50%,  
+  #5aa2ff 50%    
+  );
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  }
+  .btn-success-vertical
+  {
+      background: linear-gradient(
+  to bottom,
+  lightgreen 50%,   
+  darkgreen 50%    
+  );
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  }
+  .btn-info-vertical
+  {
+      background: linear-gradient(
+  to bottom,
+  #6ed3f0 50%,   
+  #4fc3e8 50%  
+  );
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  }
+  .btn-danger-vertical
+  {
+      background: linear-gradient(
+  to bottom,
+  #f27d7d 50%,   
+  #e74c3c 50%    
+  );
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  }
+  .btn-warning-vertical
+  {
+      background: linear-gradient(
+  to bottom,
+  #f4b04a 50%,  
+  #f39c1f 50%  
+  );
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  }

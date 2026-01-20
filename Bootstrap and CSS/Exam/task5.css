@@ -1,0 +1,40 @@
+body {
+    background-color: #ffffff;
+    font-family: "Robot", sans-serif;
+  }
+
+  .shipping-title {
+    color: #1ea7fd;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+
+  .form-control, .form-select {
+    border: 2px solid #8c8c8c;
+    border-radius: 4px;
+    padding: 10px 12px;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #1ea7fd;
+    box-shadow: none;
+  }
+
+  .btn-continue {
+    background-color: #c98c0a;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+  }
+
+  .btn-continue:hover {
+    background-color: #b17a08;
+  }
+  .is-valid {
+    border-color: #8c8c8c !important;
+    background-image: none !important;
+  }
+  

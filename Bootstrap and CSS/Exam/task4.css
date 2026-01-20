@@ -1,0 +1,50 @@
+body {
+    background-color: #6ea0f6;
+    padding: 40px 15px;
+    font-family: "Robot", sans-serif;
+  }
+
+  .table-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    padding: 20px;
+  }
+
+  table {
+    margin-bottom: 0;
+  }
+
+  thead th {
+    font-size: 13px;
+    color: #777;
+    border-bottom: 1px solid #eaeaea;
+    white-space: nowrap;
+  }
+
+  tbody td {
+    font-size: 14px;
+    color: #555;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .btn-close-custom {
+    background-color: #ff4d5a;
+    color: #fff;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .btn-close-custom:hover {
+    background-color: #e63c48;
+  }
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }

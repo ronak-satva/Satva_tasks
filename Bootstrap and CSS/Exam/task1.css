@@ -1,0 +1,19 @@
+body {
+    font-family: "Robot", sans-serif;
+  }
+.btn-login {
+    background-color: #1f4d3b;
+    color: #fff;
+}
+ 
+.btn-login:hover {
+    background-color: #183d30;
+    color: #fff;
+}
+ 
+.form-control {
+    height: 45px;
+}
+img{
+    width: 50%;
+}

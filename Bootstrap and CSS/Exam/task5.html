@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shipping Address</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--actual font files (crossorigin for various browser support)-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+
+  <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+
+<div class="container my-5">
+  <h2 class="shipping-title">Shipping Address</h2>
+
+  <form class="needs-validation" novalidate>
+
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="First Name" pattern="[A-Za-z]+" required>
+        <div class="invalid-feedback">Enter valid first name</div>
+      </div>
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Last Name" pattern="[A-Za-z]+" required>
+        <div class="invalid-feedback">enter valid last name</div>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-md-9">
+        <input type="text" class="form-control" placeholder="Address" required>
+        <div class="invalid-feedback">Address is required.</div>
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Apt" required>
+        <div class="invalid-feedback">Apartment is required.</div>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="City" pattern="[A-Za-z]+" required>
+        <div class="invalid-feedback">City is required.</div>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select" required>
+          <option value="">State</option>
+          <option>California</option>
+          <option>NY</option>
+          <option>TX</option>
+          <option>FL</option>
+        </select>
+        <div class="invalid-feedback">Please select a state.</div>
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="ZIP Code" required pattern="^\d{5}(-\d{4})?$" title="Enter a valid 5 or 9-digit ZIP code (e.g., 12345 or 12345-6789)" maxlength="10">
+        <div class="invalid-feedback">Valid ZIP code required.</div>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-9">
+        <input type="email" class="form-control" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*" placeholder="Email address for receipt" required>
+        <div class="invalid-feedback">Valid email required.</div>
+      </div>
+      <div class="col-md-3">
+        <input type="tel" class="form-control" placeholder="Primary Phone"  pattern="[0-9]{10}" maxlength="10" required>
+        <div class="invalid-feedback">Phone number required.</div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-continue">CONTINUE</button>
+
+  </form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  (() => {
+    'use strict';
+
+    const form = document.querySelector('.needs-validation');
+    const inputs = form.querySelectorAll('input, select');
+
+    // Validate on typing / change
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        validateField(input);
+      });
+
+      input.addEventListener('blur', () => {
+        validateField(input);
+      });
+    });
+
+    function validateField(field) {
+      if (field.checkValidity()) {
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
+      } else {
+        field.classList.remove('is-valid');
+        field.classList.add('is-invalid');
+      }
+    }
+
+    // Final validation on submit
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      inputs.forEach(input => validateField(input));
+    });
+
+  })();
+
+</script>
+
+</body>
+</html>

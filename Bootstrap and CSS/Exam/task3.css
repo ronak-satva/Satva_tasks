@@ -1,0 +1,72 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #4e8f88;
+}
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+}
+.navbar .nav-link.active {
+    color: #00cba9;          /* highlight color */
+    font-weight: 500;
+    border-bottom: 2px solid #00cba9;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #6fbdb3;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero i {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Features */
+.features {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #4e8f88;
+    margin-bottom: 15px;
+}
+
+/* Quote Section */
+.quote-section {
+    background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.quote-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.quote-content {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.quote-author {
+    margin-top: 20px;
+    font-style: italic;
+}
