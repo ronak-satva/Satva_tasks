@@ -1,0 +1,11 @@
+body {
+    background-color: #f5f7fa;
+    padding: 30px;
+  }
+
+  .additionCard {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
