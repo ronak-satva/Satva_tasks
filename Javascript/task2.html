@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tax Slab Calculation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="task2.css">
+</head>
+
+<body>
+<div class="container my-4">
+  <h3 class="text-center mb-4 border p-2">TAX SLAB CALCULATION</h3>
+
+  <form id="taxForm" class="needs-validation" novalidate>
+
+    <div class="row g-3">
+      <div class="col-md-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" id="userName" pattern="[A-Za-z]+" required>
+        <div class="invalid-feedback">Valid name is required</div>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Mobile</label>
+        <input type="number" class="form-control" id="mobileNumber" pattern="[0-9]{10}" required>
+        <div class="invalid-feedback">Enter valid 10 digit mobile</div>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Birthdate</label>
+        <input type="date" class="form-control" id="birthDate" required>
+        <div class="invalid-feedback">Birthdate required</div>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Gender</label>
+        <select class="form-select" id="gender" required>
+          <option value="">Select</option>
+          <option value="men">Men</option>
+          <option value="women">Women</option>
+          <option value="senior">Senior Citizen</option>
+        </select>
+        <div class="invalid-feedback">Select gender</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Income (INR)</label>
+        <input type="number" class="form-control" id="income" required>
+        <div class="invalid-feedback">Income required</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Loan (INR)</label>
+        <input type="number" class="form-control" id="loan" required>
+        <div class="invalid-feedback">Loan required</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Investment (INR)</label>
+        <input type="number" class="form-control" id="investment" required>
+        <div class="invalid-feedback">Investment required</div>
+      </div>
+    </div>
+
+    <div class="mt-4 d-flex gap-3">
+      <button type="submit" class="btn btn-success">Calculate</button>
+      <button type="reset" class="btn btn-warning" id="resetBtn">Reset</button>
+    </div>
+
+    <div id="output" class="outputBox d-none">
+      <p><strong>Name:</strong> <span id="outName"></span></p>
+      <p><strong>Taxable Amount:</strong> ₹<span id="taxableAmount"></span></p>
+      <p><strong>Payable Tax:</strong> ₹<span id="payableTax"></span></p>
+    </div>
+
+  </form>
+  <div class="row">
+    <div class="col-md-4">
+      <div id="output" class="outputBox d-none">
+        <p><strong>Name:</strong> <span id="outName"></span></p>
+        <p><strong>Taxable Amount:</strong> ₹<span id="taxableAmount"></span></p>
+        <p><strong>Payable Tax:</strong> ₹<span id="payableTax"></span></p>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <h5>Tax Slab</h5>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>For Men</strong>
+      <p>Upto 2.4L - No Tax</p>
+      <p>2.4L to 6L - 10%</p>
+      <p>Above 6L - 20%</p>
+    </div>
+    <div class="col-md-4">
+      <strong>For Women</strong>
+      <p>Upto 2.6L - No Tax</p>
+      <p>2.6L to 7L - 10%</p>
+      <p>Above 7L - 20%</p>
+    </div>
+    <div class="col-md-4">
+      <strong>Senior Citizen</strong>
+      <p>Upto 3L - No Tax</p>
+      <p>3L to 7L - 10%</p>
+      <p>Above 7L - 20%</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(() => {
+  const form = document.getElementById("taxForm");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return;
+    }
+
+    calculateTax();
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    document.getElementById("output").classList.add("d-none");
+    form.classList.remove("was-validated");
+  });
+})();
+
+function calculateTax() {
+  const name = document.getElementById("userName").value;
+  const gender = document.getElementById("gender").value;
+  const income = Number(document.getElementById("income").value);
+  const loan = Number(document.getElementById("loan").value);
+  const investment = Number(document.getElementById("investment").value);
+
+  // exemptions
+  const loanExempt = Math.min(loan * 0.8, income * 0.2);
+  const investmentExempt = Math.min(investment, 100000);
+
+  const taxableIncome = Math.max(0, income - loanExempt - investmentExempt);
+
+  let payableTax = 0;
+  let bgClass = "bgTax";
+
+  if (gender === "men") {
+    if (taxableIncome <= 240000) bgClass = "bgNoTax";
+    else if (taxableIncome <= 600000) payableTax = taxableIncome * 0.10;
+    else payableTax = taxableIncome * 0.20;
+  }
+
+  if (gender === "women") {
+    if (taxableIncome <= 260000) bgClass = "bgNoTax";
+    else if (taxableIncome <= 700000) payableTax = taxableIncome * 0.10;
+    else payableTax = taxableIncome * 0.20;
+  }
+
+  if (gender === "senior") {
+    if (taxableIncome <= 300000) bgClass = "bgNoTax";
+    else if (taxableIncome <= 700000) payableTax = taxableIncome * 0.10;
+    else payableTax = taxableIncome * 0.20;
+  }
+
+  const output = document.getElementById("output");
+  output.className = `outputBox ${bgClass}`;
+  output.classList.remove("d-none");
+
+  document.getElementById("outName").innerText = name;
+  document.getElementById("taxableAmount").innerText = taxableIncome.toFixed(2);
+  document.getElementById("payableTax").innerText = payableTax.toFixed(2);
+
+
+
+  document.getElementById("resetBtn").addEventListener("click", () => {
+  document.getElementById("output").classList.add("d-none");
+  document.getElementById("taxForm").classList.remove("was-validated");
+});
+
+}
+
+</script>
+
+</body>
+</html>

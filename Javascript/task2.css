@@ -1,0 +1,12 @@
+.outputBox {
+    padding: 15px;
+    border-radius: 6px;
+    color: #fff;
+    margin-top: 15px;
+  }
+  .bgNoTax {
+    background-color: green;
+  }
+  .bgTax {
+    background-color: navy;
+  }
