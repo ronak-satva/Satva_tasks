@@ -1,0 +1,46 @@
+body {
+    background-color: #f2f2f2;
+  }
+
+  .formWrapper {
+    background: #dcdcdc;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+  }
+
+  .formStep {
+    display: none;
+  }
+
+  .formStep.active {
+    display: block;
+  }
+
+  .stepDots {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .stepDot {
+    height: 12px;
+    width: 12px;
+    background-color: #bdbdbd;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .stepDot.active {
+    background-color: #4caf50;
+  }
+
+  .btnPrev {
+    background-color: orange;
+    color: white;
+  }
+
+  .btnNext {
+    background-color: #4caf50;
+    color: white;
+  }

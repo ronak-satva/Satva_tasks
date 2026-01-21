@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="task3.css">
+</head>
+
+<body>
+
+<div class="container">
+  <div class="formWrapper">
+
+    <h2 class="text-center mb-4">REGISTRATION</h2>
+
+    <form id="registrationForm" novalidate>
+
+      <!-- STEP 1 -->
+      <div class="formStep active">
+        <h5>PERSONAL DETAILS</h5>
+
+        <input type="text" class="form-control mb-2" id="firstName" placeholder="First Name" pattern="[A-Za-z]+" required>
+        <div class="invalid-feedback">First name is required</div>
+
+        <input type="text" class="form-control mb-2" id="lastName" placeholder="Last Name" pattern="[A-Za-z]+" required>
+        <div class="invalid-feedback">Last name is required</div>
+
+        <select class="form-control mb-2" id="gender" required>
+          <option value="">Choose Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <div class="invalid-feedback">Select gender</div>
+
+        <input type="text" class="form-control mb-2" id="zipCode" placeholder="Zip Code" pattern="[0-9]{6}" required>
+        <div class="invalid-feedback">Enter valid zipcode</div>
+
+        <div class="text-end">
+          <button type="button" class="btn btnNext" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="formStep">
+        <h5>PROFILE INFORMATION</h5>
+
+        <input type="email" class="form-control mb-2" id="email" placeholder="E-mail" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*" required>
+        <div class="invalid-feedback">Enter valid email</div>
+
+        <input type="text" class="form-control mb-2" id="username" placeholder="Username" required>
+        <div class="invalid-feedback">Username required</div>
+
+        <input type="password" class="form-control mb-2" id="password" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        <div class="invalid-feedback">Password should be valid</div>
+
+        <input type="password" class="form-control mb-2" id="confirmPassword" placeholder="Confirm Password" required>
+        <div class="invalid-feedback">Passwords must match</div>
+
+        <div class="text-end">
+          <button type="button" class="btn btnPrev" onclick="prevStep()">Previous</button>
+          <button type="button" class="btn btnNext" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="formStep">
+        <h5>BANK INFORMATION</h5>
+
+        <select class="form-control mb-2" id="bankName" required>
+          <option value="">Choose Bank</option>
+          <option>Kotak</option>
+          <option>SBI</option>
+          <option>HDFC</option>
+        </select>
+        <div class="invalid-feedback">Select bank</div>
+
+        <select class="form-control mb-2" id="accountType" required>
+          <option value="">Choose Account</option>
+          <option>Saving</option>
+          <option>Current</option>
+        </select>
+        <div class="invalid-feedback">Select account type</div>
+
+        <input type="text" class="form-control mb-2" id="accountNumber" placeholder="Account Number" pattern="[0-9]{8,16}" required>
+        <div class="invalid-feedback">Account number required</div>
+
+        <div class="text-end">
+          <button type="button" class="btn btnPrev" onclick="prevStep()">Previous</button>
+          <button type="button" class="btn btnNext" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="formStep">
+        <h5>PAYMENT INFORMATION</h5>
+
+        <select class="form-control mb-2" id="paymentType" required>
+          <option value="">Choose Card</option>
+          <option>Master Card</option>
+          <option>Visa</option>
+        </select>
+        <div class="invalid-feedback">Select card type</div>
+
+        <input type="text" class="form-control mb-2" id="cardNumber" placeholder="Card Number" pattern="[0-9]{16}" required>
+        <div class="invalid-feedback">Card number must be 16 digits</div>
+
+        <input type="text" class="form-control mb-2" id="cvv" placeholder="CVV" pattern="[0-9]{3}" required>
+        <div class="invalid-feedback">CVV must be 3 digits</div>
+
+        <input type="month" class="form-control mb-2" id="expiryDate" required>
+        <div class="invalid-feedback">Expiry date required</div>
+
+        <div class="text-end">
+          <button type="button" class="btn btnPrev" onclick="prevStep()">Previous</button>
+          <button type="button" class="btn btnNext" onclick="showSummary()">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="formStep">
+        <h5>USER DETAILS</h5>
+
+        <table class="table table-borderless">
+          <tbody id="summaryTable"></tbody>
+        </table>
+
+        <div class="text-end">
+          <button type="button" class="btn btnPrev" onclick="prevStep()">Previous</button>
+          <button type="submit" class="btn btnNext">Submit</button>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="stepDots">
+      <span class="stepDot active"></span>
+      <span class="stepDot"></span>
+      <span class="stepDot"></span>
+      <span class="stepDot"></span>
+      <span class="stepDot"></span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+let currentStep = 0;
+const formSteps = document.querySelectorAll(".formStep");
+const stepDots = document.querySelectorAll(".stepDot");
+
+function showStep(step) {
+  formSteps.forEach((stepDiv, index) => {
+    stepDiv.classList.toggle("active", index === step);
+    stepDots[index].classList.toggle("active", index <= step);
+  });
+}
+
+function validateField(input) {
+  const valid = input.checkValidity();
+
+  if (valid) {
+    input.classList.add("is-valid");
+    input.classList.remove("is-invalid");
+  } else {
+    input.classList.add("is-invalid");
+    input.classList.remove("is-valid");
+  }
+
+  return valid;
+}
+
+document.querySelectorAll("input, select").forEach(input => {
+  input.addEventListener("input", () => validateField(input));
+  input.addEventListener("change", () => validateField(input));
+});
+
+function validateStep() {
+  let valid = true;
+  formSteps[currentStep].querySelectorAll("input, select").forEach(input => {
+    if (!validateField(input)) valid = false;
+  });
+
+  const password = document.getElementById("password");
+  const confirm = document.getElementById("confirmPassword");
+
+  confirm.addEventListener("input", () => {
+  if (confirm.value === "") {
+    confirm.classList.remove("is-valid", "is-invalid");
+  } else if (password.value !== confirm.value) {
+    confirm.classList.add("is-invalid");
+    confirm.classList.remove("is-valid");
+  } else {
+    confirm.classList.add("is-valid");
+    confirm.classList.remove("is-invalid");
+  }
+});
+
+
+
+  return valid;
+}
+
+function nextStep() {
+  if (!validateStep()) return;
+  currentStep++;
+  showStep(currentStep);
+}
+
+function prevStep() {
+  currentStep--;
+  showStep(currentStep);
+}
+
+function showSummary() {
+  if (!validateStep()) return;
+  const summary = document.getElementById("summaryTable");
+  summary.innerHTML = "";
+
+  document.querySelectorAll("input, select").forEach(field => {
+    if (field.type !== "password") {
+      summary.innerHTML += `<tr><td>${field.id}</td><td>${field.value}</td></tr>`;
+    }
+  });
+
+  nextStep();
+}
+
+document.getElementById("registrationForm").addEventListener("submit", e => {
+  e.preventDefault();
+  alert("Form Submitted Successfully");
+  location.reload();
+});
+</script>
+
+</body>
+</html>
