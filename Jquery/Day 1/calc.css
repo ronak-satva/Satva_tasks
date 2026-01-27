@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+ 
+.calculator {
+    max-width: 500px;
+    margin: 100px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+ 
+.display {
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 32px;
+    padding: 20px;
+    text-align: right;
+}
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+ 
+td.operator {
+    background-color: #eeeeee;
+    font-weight: bold;
+}
+ 
+td.equal {
+    background-color: #3b1404;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+}

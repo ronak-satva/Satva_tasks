@@ -1,0 +1,9 @@
+body {
+    background: #f8f9fa;
+  }
+.summary-box {
+    background: #fdfbdc;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+  }

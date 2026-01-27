@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percentage Calculator</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="calc.css">
+</head>
+<body>
+<div class="calculator">
+    <div class="display" id="display">0</div>
+    <table class="table-responsive">
+        <tr>
+            <td onclick="pressOperator('+')">+</td>
+            <td onclick="pressOperator('-')">-</td>
+            <td onclick="pressOperator('x')">x</td>
+            <td onclick="pressOperator('÷')">÷</td>
+        </tr>
+        <tr>
+            <td onclick="pressNumber('7')">7</td>
+            <td onclick="pressNumber('8')">8</td>
+            <td onclick="pressNumber('9')">9</td>
+            <td onclick="pressOperator('%')">%</td>
+        </tr>
+        <tr>
+            <td onclick="pressNumber('4')">4</td>
+            <td onclick="pressNumber('5')">5</td>
+            <td onclick="pressNumber('6')">6</td>
+            <td onclick="pressEqual()" rowspan="3" class="equal">=</td>
+        </tr>
+        <tr>
+            <td onclick="pressNumber('1')">1</td>
+            <td onclick="pressNumber('2')">2</td>
+            <td onclick="pressNumber('3')">3</td>
+        </tr>
+        <tr>
+            <td onclick="pressNumber('0')">0</td>
+            <td onclick="pressDecimal()">.</td>
+            <td onclick="pressAC()">AC</td>
+        </tr>
+    </table>
+</div>
+
+<script src="calc.js"></script>
+</body>
+</html>
