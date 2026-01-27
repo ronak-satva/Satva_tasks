@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Satva Healthcare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery UI -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<!-- Bootstrap Multiselect -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-multiselect@1.1.0/dist/css/bootstrap-multiselect.css">
+
+<link rel="stylesheet" href="task3.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SATVA<br>HEALTHCARE</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto">
+
+        <!-- WORK -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">WORK</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item">Portfolio</a></li>
+            <li><a class="dropdown-item">Case Studies</a></li>
+            <li><a class="dropdown-item">Testimonials</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES MEGA MENU -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+          <div class="dropdown-menu dropdown-mega">
+            <div class="row">
+              <div class="col-md-2">
+                <h6>Pharmaceutical</h6>
+                <p> Medicine Search<br> Buy Medicine<br> Locate Medical Store</p>
+              </div>
+              <div class="col-md-2">
+                <h6>Diseases</h6>
+                <p> Physical<br> Internal<br> Mental</p>
+              </div>
+              <div class="col-md-2">
+                <h6>Medical</h6>
+                <p> Search Hospitals<br> Treatment Details</p>
+              </div>
+              <div class="col-md-2">
+                <h6></h6>Self Care</h6>
+                <p> Self Medicine Reminder<br> Health Tips</p>
+              </div>
+              <div class="col-md-2">
+                <h6>Hire</h6>
+                <p> Book Nursing Staff<br> Book Ambulance<br> Book Doctor<br> Book Appointment</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- ABOUT -->
+        <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link dropdown-toggle" href="#">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Who we are?</a></li>
+              <li><a class="dropdown-item">Motive & Motivation</a></li>
+              <li><a class="dropdown-item">Donate Us</a></li>
+            </ul>
+          </li>
+          
+
+        <li class="nav-item">
+          <a class="nav-link">Sales Inquiry</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= FORM ================= -->
+<div class="container form-section">
+  <h5 class="text-center mb-4">BOOK NURSING STAFF (THIS IS ONE OF YOUR SERVICES)</h5>
+
+  <form id="bookForm" novalidate>
+    <div class="row g-3">
+
+      <div class="col-md-4">
+        <label>Patient Name</label>
+        <input type="text" class="form-control" id="patientName" name="patientName" required>
+      </div>
+
+      <div class="col-md-4">
+        <label>Mobile Number</label>
+        <input type="text" class="form-control" id="mobile" maxlength="10" name="mobile" required>
+      </div>
+
+      <div class="col-md-4">
+        <label>Diseases List</label>
+        <select id="disease" name="disease[]" multiple>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Heart">Heart</option>
+            <option value="BP">BP</option>
+            <option value="Asthma">Asthma</option>
+          </select>
+      </div>
+
+      <div class="col-md-4">
+        <label>City</label>
+        <input type="text" class="form-control" id="city" name="city">
+      </div>
+
+      <div class="col-md-4">
+        <label>Service Date</label>
+        <input type="text" class="form-control" id="dateRange"  name="dateRange">
+      </div>
+
+      <div class="col-md-4">
+        <label>No of Staff</label>
+        <input type="number" class="form-control" id="staffCount" min="1" name="staffCount" >
+      </div>
+
+      <div class="col-md-12">
+        <label>Address</label>
+        <textarea class="form-control" name="address"></textarea>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-primary">Book Staff</button>
+        <button type="reset" class="btn btn-warning">Clear</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-multiselect@1.1.0/dist/js/bootstrap-multiselect.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="task3.js"></script>
+    
+    
+
+</body>
+</html>

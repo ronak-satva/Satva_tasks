@@ -1,0 +1,29 @@
+body {
+    background: #f4f6f8;
+}
+
+.quiz-box {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.feedback {
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+#finalScore {
+    display: none;
+    font-size: 24px;
+}

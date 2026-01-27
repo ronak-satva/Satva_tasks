@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New Customer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+ 
+<!--focus on name-->
+<body>
+ 
+<div class="wrapper">
+ 
+<!--sidebar-->
+<div class="sidebar">
+    <h2>ZOHO</h2>
+    <div class="menu">
+        <p><i class="fa-solid fa-gauge"></i> Dashboard</p>
+        <p> <i class="fa-solid fa-box"></i> Items</p>
+        <p> <i class="fa-solid fa-building-columns"></i> Banking</p>
+        <br>
+        <div class="dropdown">
+            <div class="drop-title"><i class="fa-solid fa-cart-shopping"></i> Sales
+                ▾ </div>
+            <div class="drop-items">
+                <p> Customers <span class="plus" >+</span></p>
+                <p> Retainer Invoices</p>
+                <p> Invoices</p>
+                <p> Payments Received</p>
+                <p> Recurring Invoices</p>
+                <p> Credit Notes</p>
+       
+            </div>
+        </div>
+        <br>
+        <div class="dropdown">
+            <div class="drop-title"><i class="fa-solid fa-cart-shopping"></i> Purchases
+                ▾ </div>
+            <div class="drop-items">
+                <p> Customers <span class="plus">+</span></p>
+                <p> Retainer Invoices</p>
+                <p> Invoices</p>
+                <p> Payments Received</p>
+                <p> Recurring Invoices</p>
+                <p> Credit Notes</p>
+       
+            </div>
+        </div>
+        <br>
+        <div class="dropdown">
+            <div class="drop-title"><i class="fa-solid fa-cart-shopping"></i> Time Tracking
+                ▾ </div>
+            <div class="drop-items">
+                <p> Customers <span class="plus">+</span></p>
+                <p> Retainer Invoices</p>
+                <p> Invoices</p>
+                <p> Payments Received</p>
+                <p> Recurring Invoices</p>
+                <p> Credit Notes</p>
+       
+            </div>
+        </div>
+        <p><i class="fa-solid fa-file-invoice"></i> e-Way Bills</p>
+        <p><i class="fa-solid fa-landmark"></i> GST Filing</p>
+ 
+    </div>
+</div>
+ 
+<!--main-->
+<div class="main">
+    <div class="utility-bar">
+ 
+        <div class="left">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-clock-rotate-left"></i>
+   
+            <input type="text" placeholder="Search in Customers">
+        </div>
+   
+        <div class="right">
+            <span><b>Satva Solutions</b></span>
+            <i class="fa-solid fa-user-group"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-circle-question"></i>
+            <img src="" alt="profile img">
+        </div>
+   
+    </div>
+   
+<div class="topbar">
+    New Customer
+</div>
+ 
+<div class="content">
+ 
+<form>
+ 
+<div class="form-row">
+<label>Customer Type</label>
+<input type="radio" name="type" required> Business
+<input type="radio" name="type"> Individual
+</div>
+ 
+<div class="form-row">
+<label>Primary Contact</label>
+<select required>
+<option value="">Salutation</option>
+<option>Mr</option>
+<option>Ms</option>
+</select>
+ 
+<input type="text" id="fname" placeholder="First Name" autofocus required>
+<input type="text" placeholder="Last Name" required>
+</div>
+ 
+<div class="form-row">
+<label>Company Name</label>
+<input type="text" required>
+</div>
+ 
+<div class="form-row">
+    <label>Company Display Name </label>
+    <select required>
+    <option value="">select company</option>
+    <option>ABC</option>
+    <option>XYZ</option>
+    <option>DEF</option>
+    </select>
+</div>
+ 
+<div class="form-row">
+<label> Email</label>
+<input type="email" required>
+</div>
+ 
+<div class="form-row phone">
+<label>Phone</label>
+<input type="tel" pattern="[0-9]{10}" placeholder="Work Phone" required>
+<input type="tel" pattern="[0-9]{10}" placeholder="Mobile">
+</div>
+ 
+<div class="form-row">
+<label>Website</label>
+<input type="url" placeholder="https://example.com" required>
+</div>
+ 
+<div class="buttons">
+<button type="submit" class="save">Save</button>
+<button type="reset" class="cancel">Cancel</button>
+</div>
+ 
+</form>
+ 
+</div>
+</div>
+ 
+</div>
+ 
+</body>
+</html>
