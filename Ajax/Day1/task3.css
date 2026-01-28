@@ -1,0 +1,4 @@
+body { background: #f8f9fa; padding: 20px; }
+.card { margin-bottom: 20px; }
+textarea { resize: vertical; }
+pre { background: #e9ecef; padding: 10px; border-radius: 5px; overflow-x: auto; }
