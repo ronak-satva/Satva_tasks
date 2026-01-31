@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reconciled Transactions</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-light bg-light px-3">
+  <span class="navbar-brand fw-bold">Reconciled Transactions</span>
+  <button id="unreconcileBtn" class="btn btn-danger">
+    Unreconciled
+  </button>
+</nav>
+
+<!-- Tabs -->
+<ul class="nav nav-tabs mb-3">
+  <li class="nav-item">
+    <a href="dashboard.html" class="nav-link" id="tab-unreconciled">
+      Unreconciled
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="reconcile.html" class="nav-link" id="tab-reconciled">
+      Reconciled
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="exclude.html" class="nav-link" id="tab-exclude">
+      Exclude
+    </a>
+  </li>
+</ul>
+
+
+<div class="container mt-4">
+  <div id="reconciledList"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="reconcile.js"></script>
+</body>
+</html>
