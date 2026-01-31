@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Excluded Transactions</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR (tabs only) -->
+<nav class="navbar navbar-light bg-light px-3">
+  <span class="navbar-brand fw-bold">Intercompany Transaction</span>
+  <button class="btn btn-success mt-4" id="includeBtn">
+    Include Selected
+  </button>
+</nav>
+
+<ul class="nav nav-tabs mb-3">
+  <li class="nav-item">
+    <a href="dashboard.html" class="nav-link" id="tab-unreconciled">Unreconciled</a>
+  </li>
+  <li class="nav-item">
+    <a href="reconcile.html" class="nav-link" id="tab-reconciled">Reconciled</a>
+  </li>
+  <li class="nav-item">
+    <a href="exclude.html" class="nav-link active" id="tab-exclude">Exclude</a>
+  </li>
+</ul>
+
+<div class="container mt-4">
+
+  <div class="row">
+
+    <!-- COMPANY A -->
+    <div class="col-md-6">
+      <h5 class="mb-3">Company A</h5>
+      <div id="excludeCompanyA"></div>
+    </div>
+
+    <!-- COMPANY B -->
+    <div class="col-md-6">
+      <h5 class="mb-3">Company B</h5>
+      <div id="excludeCompanyB"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="exclude.js"></script>
+
+</body>
+</html>
