@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "9e9af487-ef05-4edf-ae60-e7e0ea957a3c",
+		"name": "Mock Countries API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51843463",
+		"_collection_link": "https://harshm-cd68cfcd-1597700.postman.co/workspace/Harsh-Mungra's-Workspace~4b2a4d4a-2691-4fdc-82f5-954f990846be/collection/51843463-9e9af487-ef05-4edf-ae60-e7e0ea957a3c?action=share&source=collection_link&creator=51843463"
+	},
+	"item": [
+		{
+			"name": "GET Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://countriesnow.space/api/v0.1/countries/",
+					"protocol": "https",
+					"host": [
+						"countriesnow",
+						"space"
+					],
+					"path": [
+						"api",
+						"v0.1",
+						"countries",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET States",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"Nigeria\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://countriesnow.space/api/v0.1/countries/states",
+					"protocol": "https",
+					"host": [
+						"countriesnow",
+						"space"
+					],
+					"path": [
+						"api",
+						"v0.1",
+						"countries",
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Cities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"India\",\r\n    \"state\": \"Puducherry\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://countriesnow.space/api/v0.1/countries/state/cities",
+					"protocol": "https",
+					"host": [
+						"countriesnow",
+						"space"
+					],
+					"path": [
+						"api",
+						"v0.1",
+						"countries",
+						"state",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
