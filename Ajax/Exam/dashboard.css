@@ -1,0 +1,20 @@
+.tx-card {
+    background-color: #b6d7a8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  .tx-card.active {
+    border: 2px solid #0d6efd;
+  }
+ 
+  .drop-zone {
+    min-height: 400px;
+    background-color: #e9f4f4;
+    border: 2px dashed #9aa;
+    padding: 10px;
+  }
