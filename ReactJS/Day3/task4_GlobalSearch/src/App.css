@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+}
+
+/* Full screen container */
+.container {
+  height: 100vh;
+  width: 100vw;   /*  important */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Title */
+.card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input styling */
+.card input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.card input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+}
+
+/* List */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* List items */
+.card li {
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card li:hover {
+  background-color: #f3f4f6;
+}
+
+/* Loading text */
+.loading {
+  color: #4f46e5;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-weight: bold;
+}

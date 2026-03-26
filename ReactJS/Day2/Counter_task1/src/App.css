@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  text-align: center;
+}
+
+/* Counter number */
+.box h2 {
+  font-size: 50px;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Common button style */
+button {
+  padding: 10px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Start button */
+button:first-of-type {
+  background-color: #4CAF50;
+}
+
+/* Pause state (optional improvement) */
+button:first-of-type:hover {
+  background-color: #45a049;
+}
+
+/* Reset button */
+button:last-of-type {
+  background-color: #f44336;
+}
+
+button:last-of-type:hover {
+  background-color: #d32f2f;
+}

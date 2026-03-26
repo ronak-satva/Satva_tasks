@@ -1,0 +1,14 @@
+.usercrd {
+    border: 1px solid gray;
+    padding : 15px;
+    margin: 10px;
+    width: 200px
+}
+
+.available{
+    color: green;
+}
+
+.not-available{
+    color: red;
+}

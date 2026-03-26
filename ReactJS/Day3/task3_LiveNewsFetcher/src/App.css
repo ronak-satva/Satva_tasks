@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Main container */
+.container {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Refresh button */
+.refresh-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+}
+
+.refresh-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Wrapper for news cards */
+.news-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual news box */
+.news-card {
+  background: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.news-card h3 {
+  margin-top: 0;
+  color: #222;
+  font-size: 18px;
+}
+
+.news-card p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}

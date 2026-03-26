@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.dashboard {
+  max-width: 500px;
+  margin: auto;
+}
+
+.server-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.server-card:hover {
+  transform: scale(1.02);
+}
+
+/* Status text */
+.status-online {
+  color: green;
+  font-weight: bold;
+}
+
+.status-maintenance {
+  color: orange;
+  font-weight: bold;
+}

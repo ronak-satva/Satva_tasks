@@ -1,0 +1,75 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+}
+
+/* App Layout */
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background-color: #1e293b;
+  padding: 15px 40px;
+  width: 100%;   /* ADD THIS */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+/* Nav Links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #334155;
+}
+
+.navbar a.active {
+  background-color: #2563eb;
+}
+
+/* Main Content Centered */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Card */
+.page-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 400px;
+}
+
+.page-content h2 {
+  margin-bottom: 15px;
+}

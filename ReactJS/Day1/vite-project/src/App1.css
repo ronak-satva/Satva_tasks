@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #282c34;
+    color: white;
+    padding: 15px;
+  }
+  
+  .layout {
+    display: flex;
+    min-height: 80vh;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background: #f4f4f4;
+    padding: 15px;
+  }
+  .sidebar-list{
+    list-style: none;
+    font: 6px;
+  }
+  .sidebar-list li{
+    margin-bottom: 10px;
+  }
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .footer {
+    background: black;
+    text-align: center;
+    padding: 10px;
+    color:#f4f4f4
+  }

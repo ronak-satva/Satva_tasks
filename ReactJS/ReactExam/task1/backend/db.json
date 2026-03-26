@@ -1,0 +1,169 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "roleId": 1
+    },
+    {
+      "id": "2",
+      "name": "Dev",
+      "email": "dev@gmail.com",
+      "password": "password",
+      "roleId": 4
+    },
+    {
+      "id": "4",
+      "name": "Aryan",
+      "email": "aryan@gmail.com",
+      "password": "password",
+      "roleId": 2
+    },
+    {
+      "id": "5",
+      "name": "Ajay",
+      "email": "ajay@gmail.com",
+      "password": "password",
+      "roleId": 3
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "permissions": {
+        "users": [
+          "view",
+          "add",
+          "edit",
+          "delete"
+        ],
+        "employees": [
+          "view",
+          "add",
+          "edit",
+          "delete"
+        ],
+        "projects": [
+          "view",
+          "add",
+          "edit",
+          "delete"
+        ],
+        "roles": [
+          "view",
+          "edit"
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "name": "HR",
+      "permissions": {
+        "users": [],
+        "employees": [
+          "view",
+          "add",
+          "edit",
+          "delete"
+        ],
+        "projects": [
+          "view",
+          "edit"
+        ],
+        "roles": []
+      }
+    },
+    {
+      "id": "3",
+      "name": "Supervisor",
+      "permissions": {
+        "users": [],
+        "employees": [
+          "view",
+          "edit"
+        ],
+        "projects": [],
+        "roles": []
+      }
+    },
+    {
+      "id": "4",
+      "name": "Manager",
+      "permissions": {
+        "users": [],
+        "employees": [],
+        "projects": [
+          "view",
+          "add",
+          "edit",
+          "delete"
+        ],
+        "roles": []
+      }
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "name": "Abhishek",
+      "designation": "Software Engineer"
+    },
+    {
+      "id": "2",
+      "name": "Harsh",
+      "designation": "Software Engineer"
+    },
+    {
+      "id": "3",
+      "name": "Meet",
+      "designation": "Developer"
+    }
+  ],
+  "projects": [
+    {
+      "id": "e9c5",
+      "name": "Synctool",
+      "description": "Authentication and Authorization",
+      "status": "Active"
+    },
+    {
+      "id": "5f15",
+      "name": "Flipkart",
+      "description": "Admin page",
+      "status": "Completed"
+    },
+    {
+      "id": "7e96",
+      "name": "Amazon",
+      "description": "Authentication ",
+      "status": "Completed"
+    },
+    {
+      "id": "6734",
+      "name": "Synctools",
+      "description": "Authentication and Authorization",
+      "status": "Completed"
+    },
+    {
+      "id": "879b",
+      "name": "Synctools",
+      "description": "Authentication and Authorization",
+      "status": "Completed"
+    },
+    {
+      "id": "def3",
+      "name": "Synctools",
+      "description": "Authentication and Authorization",
+      "status": "Completed"
+    },
+    {
+      "id": "cdef",
+      "name": "Synctools",
+      "description": "Authentication",
+      "status": "Active"
+    }
+  ]
+}

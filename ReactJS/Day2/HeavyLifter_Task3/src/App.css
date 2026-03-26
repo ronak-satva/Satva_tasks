@@ -1,0 +1,85 @@
+/* Body reset */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Centering Wrapper */
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* Horizontal center */
+  align-items: center;       /* Vertical center */
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode background */
+.app.dark {
+  background-color: #121212;
+}
+
+/* Inner Content Box */
+.container {
+  width: 600px;
+  max-height: 90vh;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: white;
+  color: #222;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Dark mode container */
+.app.dark .container {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  padding: 10px 18px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+/* Search Input */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Scrollable List */
+.list-container {
+  max-height: 350px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.app.dark .list-container {
+  border-color: #333;
+}
+
+/* List Item */
+.list-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.app.dark .list-item {
+  border-bottom: 1px solid #333;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
